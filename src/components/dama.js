@@ -1,9 +1,16 @@
 import React from 'react';
 
 function Tile(props) {
+    let tileColor;
+    let colorTile1 = props.x%2===0 && props.y%2===0;
+    let colorTile2 = props.x%2!==0 && props.y%2!==0;
+    if(colorTile1 || colorTile2) {
+        tileColor = 'black_tile';
+    }
+
     return (
-        <button className="tile" onClick={props.onClick}>
-            {props.x}:{props.y}
+        <button className={'tile '+ tileColor} onClick={props.onClick}>
+
         </button>
     )
 }
@@ -27,13 +34,13 @@ export default class extends React.Component {
                 <Tile 
                     key={'t'+x+y} 
                     x={x} 
-                    y={y} 
+                    y={y}
                     onClick={() => this.handleClick(x,y)} />
             );
 
             return (
                 <div key={'r'+x} className="row">
-                    {row}
+                   <h4>{x}</h4> {row}
                 </div>
             )
         })

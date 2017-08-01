@@ -9,6 +9,9 @@
   justify-content: center;
   align-items: center;
 }
+.black_tile{
+  background-color: #a9d2af;
+}
 .board{
   display: block;
 }
