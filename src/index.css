@@ -20,6 +20,18 @@
   justify-content: center;
   /*border: 1px solid black;*/
 }
+.blackPiece{
+  color:white;
+}
+.highlight-tile{
+  border-color: rgba(255, 255, 0, 0.52);
+  box-shadow: 1px 1px 15px rgba(255, 255, 0, 0.64);
+  z-index: 1;
+}
+.selected {
+  box-shadow: 1px 1px 15px #007FFF;
+  z-index:
+}
 /*body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
