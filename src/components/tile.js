@@ -10,17 +10,31 @@ export default function Tile(props) {
         tileClass += ' black_tile';
     }
 
+    if(props.highlight) {
+        tileClass += ' highlight-tile';
+    }
+
+    if(props.selected) {
+        tileClass += ' selected';
+    }
+
+    if(props.team!== 0 && props.selectedTeam!== props.team && props.highlight){
+        tileClass += ' highlight-red';
+    }
+
     switch (props.team){
         case 1:
             piece =
                 <span className="fa-stack fa-lg">
                     <i className="fa fa-circle fa-stack-2x fa-inverse" aria-hidden="true"></i>
+                    <i className="fa fa-stack-1x coordinate" aria-hidden="true">{props.x},{props.y}</i>
                 </span>
             break;
         case 2:
             piece = 
                 <span className="fa-stack fa-lg">
                     <i className="fa fa-circle fa-stack-2x " aria-hidden="true"></i>
+                    <i className="fa fa-stack-1x coordinate fa-inverse" aria-hidden="true">{props.x},{props.y}</i>
                 </span>
             break;
         case 3:
@@ -38,16 +52,13 @@ export default function Tile(props) {
                 </span>
             break;
         default:
+            piece =
+                <span className="fa-stack fa-lg">
+                    <i className="fa fa-stack-1x coordinate" aria-hidden="true">{props.team}</i>
+                </span>
             break;
     }
 
-    if(props.highlight) {
-        tileClass += ' highlight-tile';
-    }
-
-    if(props.selected) {
-        tileClass += ' selected';
-    }
 
     return (
         <div className={tileClass} onClick={props.onClick}>

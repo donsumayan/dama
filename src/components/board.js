@@ -26,6 +26,7 @@ export default class Board extends React.Component{
                             y={y}
                             highlight={highlight}
                             selected={selected}
+                            selectedTeam={selectedPiece}
                             team={value}
                             onClick={() => this.props.onClick({x,y})} />
             });
