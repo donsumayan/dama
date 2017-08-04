@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import GridReducer from './gridReducer'
 
-import grid from './gridReducer';
+const reducers = combineReducers({
+    GridReducer
+})
 
-export default combineReducers({
-    grid
-});
+export default reducers;

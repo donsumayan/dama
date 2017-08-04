@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import Dama from './components/dama';
-import Store from './store';
+import store from './store';
 import './index.css';
 import '../node_modules/font-awesome/fonts/fontawesome-webfont.svg';
 import '../node_modules/font-awesome/css/font-awesome.css';
+import 'react-bootstrap';
 
 // ========================================
-
-const store = Store();
-
-// store.subscribe(()=> console.log(store.getState()))
 
 ReactDOM.render(
     <Provider store={store}>
