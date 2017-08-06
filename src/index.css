@@ -3,7 +3,6 @@
   height:70px;
   margin: 1px;
   border: 1px solid transparent;
-  background-color: #D8D8D8;
   border-radius: 2px;
   display: flex;
   justify-content: center;
@@ -13,16 +12,23 @@
 .black_tile{
   background-color: #a9d2af;
 }
+.white_tile{
+  background-color: #D8D8D8;
+}
 .board{
   display: block;
 }
 .row{
   display: flex;
   justify-content: center;
-  /*border: 1px solid black;*/
 }
-.blackPiece{
+
+.white{
   color:white;
+}
+
+.black{
+  color:black;
 }
 .highlight-tile{
   border-color: rgba(255, 255, 0, 0.52);
@@ -40,4 +46,5 @@
 }
 .coordinate{
   font-size: 12px !important;
+  color:red;
 }

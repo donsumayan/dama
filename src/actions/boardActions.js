@@ -10,3 +10,9 @@ export function startNewGame(){
         type: 'NEW_GAME'
     };
 }
+
+export function undoMove(){
+    return {
+        type: 'UNDO_MOVE'
+    };
+}
